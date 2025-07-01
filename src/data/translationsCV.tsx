@@ -58,7 +58,7 @@ export const translationsCV = {
         description:
           "เว็บไซต์ขายของออนไลน์ด้วย React และ Next.js รองรับการชำระเงินและจัดการสินค้า",
         technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-        github: "github.com/somchai/ecommerce-project",
+        github: "github.com/srseen/ecommerce-project",
         demo: "project-demo.com",
       },
       {
@@ -66,7 +66,7 @@ export const translationsCV = {
         description:
           "แอปพลิเคชันสำหรับบันทึกและจัดการรายรับ-รายจ่าย พร้อมกราฟแสดงผล",
         technologies: ["React", "Chart.js", "Express.js", "MongoDB"],
-        github: "github.com/somchai/expense-tracker",
+        github: "github.com/srseen/expense-tracker",
         demo: "expense-app.com",
       },
     ],
@@ -138,7 +138,7 @@ export const translationsCV = {
         description:
           "Online shopping website built with React and Next.js supporting payment processing and product management",
         technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-        github: "github.com/somchai/ecommerce-project",
+        github: "github.com/srseen/ecommerce-project",
         demo: "project-demo.com",
       },
       {
@@ -146,7 +146,7 @@ export const translationsCV = {
         description:
           "Application for recording and managing income-expenses with chart visualization",
         technologies: ["React", "Chart.js", "Express.js", "MongoDB"],
-        github: "github.com/somchai/expense-tracker",
+        github: "github.com/srseen/expense-tracker",
         demo: "expense-app.com",
       },
     ],
