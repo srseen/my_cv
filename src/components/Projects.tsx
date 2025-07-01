@@ -50,13 +50,9 @@ const Projects = () => {
       </h3>
       <div className="space-y-4">
         {projects[language].map((project, index) => (
-          <div key={index} className="bg-gray-100 p-4 rounded-lg border">
+          <div key={index} className=" p-4">
             <div className="flex justify-between items-start mb-2">
               <h4 className="font-medium text-gray-900">{project.title}</h4>
-              <div className="flex gap-2">
-                <ExternalLink size={14} className="text-gray-600" />
-                <Github size={14} className="text-gray-600" />
-              </div>
             </div>
             <p className="text-sm text-gray-800 mb-3">{project.description}</p>
             <div className="flex flex-wrap gap-2 mb-2">

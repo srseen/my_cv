@@ -9,7 +9,7 @@ const Education = () => {
       <h3 className="text-lg font-semibold text-gray-900 mb-4 border-l-4 border-red-600 pl-3">
         {t("education")}
       </h3>
-      <div className="bg-gray-100 p-4 rounded-lg border">
+      <div className=" p-4">
         <div className="flex items-start gap-3">
           <GraduationCap size={20} className="text-blue-700 mt-1" />
           <div>

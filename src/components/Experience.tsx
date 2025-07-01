@@ -42,7 +42,7 @@ const Experience = () => {
       </h3>
       <div className="space-y-4">
         {experiences[language].map((exp, index) => (
-          <div key={index} className="border-l-2 border-gray-300 pl-4 pb-4">
+          <div key={index} className=" pl-4 pb-4">
             <div className="mb-2">
               <h4 className="font-medium text-gray-900">{exp.title}</h4>
               <p className="text-blue-700 text-sm font-medium">{exp.company}</p>
