@@ -38,45 +38,41 @@ const Portfolio = () => {
 
   return (
     <div className="w-full h-full flex flex-col items-center bg-gray-100">
-      <div className="absolute top-4 left-4 z-50 print:hidden md:hidden">
-        <LanguageToggle />
+      <div className="flex justify-center items-center m-4 gap-2">
+        <div className="print:hidden gap-4 hidden md:block">
+          <LanguageToggle />
+        </div>
+        <div className="print:hidden gap-4 hidden md:block">
+          <Button
+            onClick={handleExportPDF}
+            disabled={isExporting}
+            className="bg-blue-700 hover:bg-blue-800 text-white p-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
+          >
+            {isExporting ? (
+              <Loader2 size={18} className="animate-spin" />
+            ) : (
+              <Download size={18} />
+            )}
+            {isExporting ? t("exporting") : t("exportPdf")}
+          </Button>
+        </div>
       </div>
 
       {/* Main content wrapper */}
-      <div className="flex flex-col justify-center items-center p-4 md:p-10">
+      <div className="flex flex-col justify-center items-center p-4">
         {/* A4 sized container */}
         <div
           id="portfolio-content"
-          className="bg-white rounded-lg ring-1 ring-black ring-opacity-5 p-4 md:p-8 animate-fade-in w-full md:w-auto"
+          className="bg-white rounded-lg ring-1 ring-black ring-opacity-5 p-8 animate-fade-in w-full"
           style={{
             width: "210mm",
             minHeight: "297mm",
             margin: "0 auto",
           }}
         >
-          <div className="relative">
-            <Header />
+          <Header />
 
-            <div className="absolute top-0 right-0 print:hidden flex gap-4hidden md:block">
-              <LanguageToggle />
-            </div>
-            <div className="absolute top-0 left-0 print:hidden flex gap-4hidden md:block">
-              <Button
-                onClick={handleExportPDF}
-                disabled={isExporting}
-                className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
-              >
-                {isExporting ? (
-                  <Loader2 size={18} className="animate-spin" />
-                ) : (
-                  <Download size={18} />
-                )}
-                {isExporting ? t("exporting") : t("exportPdf")}
-              </Button>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="flex grid-cols-3 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 space-y-6">
               <About />
               <Experience />
