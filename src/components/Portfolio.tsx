@@ -37,29 +37,32 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 font-inter">
-      <div className="max-w-4xl mx-auto px-4">
-        {/* Controls */}
-        <div className="flex justify-between items-center mb-4">
-          <div data-language-toggle>
-            <LanguageToggle />
-          </div>
-          <div data-export-button>
-            <Button
-              onClick={handleExportPDF}
-              disabled={isExporting}
-              className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
-            >
-              {isExporting ? (
-                <Loader2 size={18} className="animate-spin" />
-              ) : (
-                <Download size={18} />
-              )}
-              {isExporting ? t("exporting") : t("exportPdf")}
-            </Button>
-          </div>
+    <div className="min-h-screen bg-gray-50 py-8 font-inter relative">
+      {/* Controls */}
+      <div className="flex flex-col justify-center items-center px-4">
+        <div
+          data-language-toggle
+          className="absolute top-7 left-96 print:hidden"
+        >
+          <LanguageToggle />
         </div>
-
+        <div
+          data-export-button
+          className="absolute top-7 right-96 print:hidden"
+        >
+          <Button
+            onClick={handleExportPDF}
+            disabled={isExporting}
+            className="bg-blue-700 hover:bg-blue-800 text-white px-2 py-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
+          >
+            {isExporting ? (
+              <Loader2 size={18} className="animate-spin" />
+            ) : (
+              <Download size={18} />
+            )}
+            {isExporting ? t("exporting") : t("exportPdf")}
+          </Button>
+        </div>
         {/* A4 sized container */}
         <div
           id="portfolio-content"
