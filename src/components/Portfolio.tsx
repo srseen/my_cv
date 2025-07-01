@@ -38,7 +38,7 @@ const Portfolio = () => {
 
   return (
     <div className="w-full h-full relative">
-      <div className="absolute right-16 top-14 z-50 print:hidden flex gap-4">
+      <div className="absolute right-96 top-14 z-50 print:hidden flex gap-4">
         <div className="hidden md:block">
           <LanguageToggle />
         </div>
