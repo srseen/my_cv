@@ -37,24 +37,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="w-full h-full relative">
-      <div className="absolute right-96 top-14 z-50 print:hidden flex gap-4">
-        <div className="hidden md:block">
-          <LanguageToggle />
-        </div>
-        <Button
-          onClick={handleExportPDF}
-          disabled={isExporting}
-          className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
-        >
-          {isExporting ? (
-            <Loader2 size={18} className="animate-spin" />
-          ) : (
-            <Download size={18} />
-          )}
-          {isExporting ? t("exporting") : t("exportPdf")}
-        </Button>
-      </div>
+    <div className="w-full h-full flex flex-col items-center bg-gray-100">
       <div className="absolute top-4 left-4 z-50 print:hidden md:hidden">
         <LanguageToggle />
       </div>
@@ -71,7 +54,28 @@ const Portfolio = () => {
             margin: "0 auto",
           }}
         >
-          <Header />
+          <div className="relative">
+            <Header />
+
+            <div className="absolute top-0 right-0 print:hidden flex gap-4hidden md:block">
+              <LanguageToggle />
+            </div>
+            <div className="absolute top-0 left-0 print:hidden flex gap-4hidden md:block">
+              <Button
+                onClick={handleExportPDF}
+                disabled={isExporting}
+                className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
+              >
+                {isExporting ? (
+                  <Loader2 size={18} className="animate-spin" />
+                ) : (
+                  <Download size={18} />
+                )}
+                {isExporting ? t("exporting") : t("exportPdf")}
+              </Button>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 space-y-6">
               <About />
