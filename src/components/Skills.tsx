@@ -1,39 +1,18 @@
-import { Code, Database, Server, Package } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { translationsCV } from "@/data/translationsCV";
 
 const Skills = () => {
-  const { t } = useLanguage();
-
-  const skillCategories = [
-    {
-      icon: <Code size={18} />,
-      title: "Frontend",
-      skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js"],
-    },
-    {
-      icon: <Server size={18} />,
-      title: "Backend",
-      skills: ["Express.js", "Nest.js", "Node.js"],
-    },
-    {
-      icon: <Database size={18} />,
-      title: "Database",
-      skills: ["MySQL", "PostgreSQL", "MongoDB"],
-    },
-    {
-      icon: <Package size={18} />,
-      title: "Tools",
-      skills: ["Docker", "Git", "VS Code", "Postman"],
-    },
-  ];
+  const { t, language } = useLanguage();
 
   return (
-    <section className="mb-6">
+    <section className="mb-6" id="skills-section">
       <h3 className="text-lg font-semibold text-gray-900 mb-4 border-l-4 border-green-600 pl-3">
         {t("skills")}
       </h3>
       <div className="grid grid-cols-2 gap-4">
-        {skillCategories.map((category, index) => (
+        {translationsCV[
+          language as keyof typeof translationsCV
+        ].skillCategories.map((category, index) => (
           <div key={index} className="p-2">
             <div className="flex items-center gap-2 mb-3">
               <span className="text-blue-700">{category.icon}</span>

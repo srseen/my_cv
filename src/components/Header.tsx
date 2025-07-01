@@ -26,7 +26,7 @@ const Header = () => {
         </div>
         <div className="flex items-center gap-2">
           <Github size={16} className="text-gray-700" />
-          <span>github.com/srseen</span>
+          <span>{t("github")}</span>
         </div>
       </div>
     </header>

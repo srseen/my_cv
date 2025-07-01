@@ -1,47 +1,9 @@
 import { ExternalLink, Github } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { translationsCV } from "@/data/translationsCV";
 
 const Projects = () => {
   const { t, language } = useLanguage();
-
-  const projects = {
-    th: [
-      {
-        title: "เว็บไซต์ E-commerce",
-        description:
-          "เว็บไซต์ขายของออนไลน์ด้วย React และ Next.js รองรับการชำระเงินและจัดการสินค้า",
-        technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-        github: "github.com/somchai/ecommerce-project",
-        demo: "project-demo.com",
-      },
-      {
-        title: "แอพบันทึกรายจ่าย",
-        description:
-          "แอปพลิเคชันสำหรับบันทึกและจัดการรายรับ-รายจ่าย พร้อมกราฟแสดงผล",
-        technologies: ["React", "Chart.js", "Express.js", "MongoDB"],
-        github: "github.com/somchai/expense-tracker",
-        demo: "expense-app.com",
-      },
-    ],
-    en: [
-      {
-        title: "E-commerce Website",
-        description:
-          "Online shopping website built with React and Next.js supporting payment processing and product management",
-        technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-        github: "github.com/somchai/ecommerce-project",
-        demo: "project-demo.com",
-      },
-      {
-        title: "Expense Tracker App",
-        description:
-          "Application for recording and managing income-expenses with chart visualization",
-        technologies: ["React", "Chart.js", "Express.js", "MongoDB"],
-        github: "github.com/somchai/expense-tracker",
-        demo: "expense-app.com",
-      },
-    ],
-  };
 
   return (
     <section className="mb-6">
@@ -49,25 +11,25 @@ const Projects = () => {
         {t("projects")}
       </h3>
       <div className="space-y-4">
-        {projects[language].map((project, index) => (
+        {translationsCV[language].projectlist.map((project, index) => (
           <div key={index} className=" p-4">
             <div className="flex justify-between items-start mb-2">
               <h4 className="font-medium text-gray-900">{project.title}</h4>
             </div>
             <p className="text-sm text-gray-800 mb-3">{project.description}</p>
             <div className="flex flex-wrap gap-2 mb-2">
-              {project.technologies.map((tech, techIndex) => (
+              {project.technologies?.map((tech, techIndex) => (
                 <span
                   key={techIndex}
                   className="text-blue-700 px-2 py-1 text-xs"
                 >
                   - {tech}
                 </span>
-              ))}
+              )) ?? null}
             </div>
             <div className="text-xs text-gray-600 space-y-1">
               <div className="flex items-center gap-1">
-                <Github size={12} />
+                {project.github && <Github size={12} />}
                 <span>{project.github}</span>
               </div>
               <div className="flex items-center gap-1">

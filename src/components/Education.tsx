@@ -17,7 +17,7 @@ const Education = () => {
             <p className="text-blue-700 text-sm">{t("university")}</p>
             <div className="flex items-center gap-1 text-xs text-gray-600 mt-1">
               <Calendar size={12} />
-              <span>2019 - 2023</span>
+              <span>{t("year")}</span>
             </div>
             <p className="text-sm text-gray-800 mt-2">{t("educationNote")}</p>
           </div>
