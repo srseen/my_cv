@@ -37,23 +37,14 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 font-inter relative">
-      {/* Controls */}
-      <div className="flex flex-col justify-center items-center px-4">
-        <div
-          data-language-toggle
-          className="absolute top-7 left-96 print:hidden"
-        >
+    <div className="min-h-screen bg-gray-100 py-8 font-inter">
+      <div className="relative max-w-4xl mx-auto overflow-hidden">
+        <div className="absolute right-16 top-14 z-50 print:hidden flex gap-4">
           <LanguageToggle />
-        </div>
-        <div
-          data-export-button
-          className="absolute top-7 right-96 print:hidden"
-        >
           <Button
             onClick={handleExportPDF}
             disabled={isExporting}
-            className="bg-blue-700 hover:bg-blue-800 text-white px-2 py-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
+            className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
           >
             {isExporting ? (
               <Loader2 size={18} className="animate-spin" />
@@ -63,26 +54,30 @@ const Portfolio = () => {
             {isExporting ? t("exporting") : t("exportPdf")}
           </Button>
         </div>
-        {/* A4 sized container */}
-        <div
-          id="portfolio-content"
-          className="bg-white shadow-xl rounded-lg p-8 animate-fade-in"
-          style={{
-            width: "210mm",
-            minHeight: "297mm",
-            margin: "0 auto",
-          }}
-        >
-          <Header />
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 space-y-6">
-              <About />
-              <Experience />
-              <Projects />
-            </div>
-            <div className="space-y-6">
-              <Skills />
-              <Education />
+
+        {/* Main content wrapper */}
+        <div className="flex flex-col justify-center items-center p-10">
+          {/* A4 sized container */}
+          <div
+            id="portfolio-content"
+            className="bg-white shadow-xl rounded-lg p-8 animate-fade-in"
+            style={{
+              width: "210mm",
+              minHeight: "297mm",
+              margin: "0 auto",
+            }}
+          >
+            <Header />
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="lg:col-span-2 space-y-6">
+                <About />
+                <Experience />
+                <Projects />
+              </div>
+              <div className="space-y-6">
+                <Skills />
+                <Education />
+              </div>
             </div>
           </div>
         </div>
