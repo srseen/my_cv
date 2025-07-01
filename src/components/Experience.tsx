@@ -18,18 +18,6 @@ const Experience = () => {
           "แก้ไขบั๊กและปรับปรุงประสิทธิภาพของเว็บไซต์",
         ],
       },
-      {
-        title: "Frontend Developer (Part-time)",
-        company: "บริษัทสตาร์ทอัพเล็กๆ",
-        period: "2022 - 2023",
-        location: "กรุงเทพฯ",
-        responsibilities: [
-          "พัฒนาส่วน Frontend ของแอปพลิเคชันด้วย React",
-          "ใช้ TypeScript เพื่อเพิ่มความปลอดภัยของโค้ด",
-          "ทำงานกับ State Management โดยใช้ Context API",
-          "เรียนรู้และใช้งาน Git สำหรับการทำงานเป็นทีม",
-        ],
-      },
     ],
     en: [
       {
@@ -42,18 +30,6 @@ const Experience = () => {
           "Improve UI/UX to be responsive and user-friendly",
           "Collaborate with Backend Developers for API integration",
           "Fix bugs and improve website performance",
-        ],
-      },
-      {
-        title: "Frontend Developer (Part-time)",
-        company: "Small Startup Company",
-        period: "2022 - 2023",
-        location: "Bangkok",
-        responsibilities: [
-          "Develop Frontend part of applications using React",
-          "Use TypeScript to improve code safety",
-          "Work with State Management using Context API",
-          "Learn and use Git for team collaboration",
         ],
       },
     ],

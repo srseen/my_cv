@@ -82,19 +82,6 @@ const Portfolio = () => {
               <Education />
             </div>
           </div>
-
-          {/* Footer */}
-          <footer className="mt-8 pt-6 border-t border-gray-300 text-center">
-            <p className="text-xs text-gray-600">
-              {language === "th"
-                ? `สร้างด้วย React และ TypeScript • อัพเดตล่าสุด: ${new Date().toLocaleDateString(
-                    "th-TH"
-                  )}`
-                : `Built with React and TypeScript • Last updated: ${new Date().toLocaleDateString(
-                    "en-US"
-                  )}`}
-            </p>
-          </footer>
         </div>
       </div>
     </div>

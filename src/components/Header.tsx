@@ -28,10 +28,6 @@ const Header = () => {
           <Github size={16} className="text-gray-700" />
           <span>github.com/somchai</span>
         </div>
-        <div className="flex items-center gap-2">
-          <Linkedin size={16} className="text-gray-700" />
-          <span>linkedin.com/in/somchai</span>
-        </div>
       </div>
     </header>
   );

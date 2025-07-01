@@ -22,14 +22,6 @@ const Projects = () => {
         github: "github.com/somchai/expense-tracker",
         demo: "expense-app.com",
       },
-      {
-        title: "เว็บไซต์ Portfolio",
-        description:
-          "เว็บไซต์แสดงผลงานส่วนตัว responsive design และสามารถ export เป็น PDF ได้",
-        technologies: ["React", "TypeScript", "Tailwind CSS"],
-        github: "github.com/somchai/portfolio",
-        demo: "somchai-portfolio.com",
-      },
     ],
     en: [
       {
@@ -47,14 +39,6 @@ const Projects = () => {
         technologies: ["React", "Chart.js", "Express.js", "MongoDB"],
         github: "github.com/somchai/expense-tracker",
         demo: "expense-app.com",
-      },
-      {
-        title: "Portfolio Website",
-        description:
-          "Personal portfolio website with responsive design and PDF export functionality",
-        technologies: ["React", "TypeScript", "Tailwind CSS"],
-        github: "github.com/somchai/portfolio",
-        demo: "somchai-portfolio.com",
       },
     ],
   };
