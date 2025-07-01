@@ -17,10 +17,12 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
   const [language, setLanguage] = useState<"th" | "en">("th");
 
   const t = (key: string): string => {
-    return (
-      translationsCV[language][key as keyof (typeof translationsCV)["th"]] ||
-      key
-    );
+    const value =
+      translationsCV[language][key as keyof (typeof translationsCV)["th"]];
+    if (typeof value === "string") {
+      return value;
+    }
+    return key;
   };
 
   return (

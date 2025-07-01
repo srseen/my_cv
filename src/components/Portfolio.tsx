@@ -37,12 +37,12 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col items-center bg-gray-100">
+    <div className="w-full h-full flex flex-col items-center justify-center">
       <div className="flex justify-center items-center m-4 gap-2">
-        <div className="print:hidden gap-4 hidden md:block">
+        <div className="print:hidden gap-4">
           <LanguageToggle />
         </div>
-        <div className="print:hidden gap-4 hidden md:block">
+        <div className="print:hidden gap-4">
           <Button
             onClick={handleExportPDF}
             disabled={isExporting}
@@ -59,7 +59,7 @@ const Portfolio = () => {
       </div>
 
       {/* Main content wrapper */}
-      <div className="flex flex-col justify-center items-center p-4">
+      <div className="w-full h-full flex flex-col justify-center items-center m-4">
         {/* A4 sized container */}
         <div
           id="portfolio-content"
@@ -72,13 +72,15 @@ const Portfolio = () => {
         >
           <Header />
 
-          <div className="flex grid-cols-3 lg:grid-cols-3 gap-6">
-            <div className="lg:col-span-2 space-y-6">
+          <div className="flex flex-row gap-6">
+            {/* Main content column */}
+            <div className="lg:w-2/3 space-y-6">
               <About />
               <Experience />
               <Projects />
             </div>
-            <div className="space-y-6">
+            {/* Sidebar content column */}
+            <div className="lg:w-1/3 space-y-6">
               <Skills />
               <Education />
             </div>
