@@ -37,14 +37,16 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 font-inter">
-      <div className="relative max-w-4xl mx-auto overflow-hidden">
-        <div className="absolute right-16 top-14 z-50 print:hidden flex gap-4">
+    <div className="w-full h-full flex flex-col items-center justify-center">
+      <div className="flex justify-center items-center m-4 gap-2">
+        <div className="print:hidden gap-4">
           <LanguageToggle />
+        </div>
+        <div className="print:hidden gap-4">
           <Button
             onClick={handleExportPDF}
             disabled={isExporting}
-            className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
+            className="bg-blue-700 hover:bg-blue-800 text-white p-2 rounded-lg shadow-md transition-all duration-200 flex items-center gap-2"
           >
             {isExporting ? (
               <Loader2 size={18} className="animate-spin" />
@@ -54,30 +56,33 @@ const Portfolio = () => {
             {isExporting ? t("exporting") : t("exportPdf")}
           </Button>
         </div>
+      </div>
 
-        {/* Main content wrapper */}
-        <div className="flex flex-col justify-center items-center p-10">
-          {/* A4 sized container */}
-          <div
-            id="portfolio-content"
-            className="bg-white shadow-xl rounded-lg p-8 animate-fade-in"
-            style={{
-              width: "210mm",
-              minHeight: "297mm",
-              margin: "0 auto",
-            }}
-          >
-            <Header />
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2 space-y-6">
-                <About />
-                <Experience />
-                <Projects />
-              </div>
-              <div className="space-y-6">
-                <Skills />
-                <Education />
-              </div>
+      {/* Main content wrapper */}
+      <div className="w-full h-full flex flex-col justify-center items-center m-4">
+        {/* A4 sized container */}
+        <div
+          id="portfolio-content"
+          className="bg-white rounded-lg ring-1 ring-black ring-opacity-5 p-8 animate-fade-in w-full"
+          style={{
+            width: "210mm",
+            minHeight: "297mm",
+            margin: "0 auto",
+          }}
+        >
+          <Header />
+
+          <div className="flex flex-row gap-6">
+            {/* Main content column */}
+            <div className="lg:w-2/3 space-y-6">
+              <About />
+              <Experience />
+              <Projects />
+            </div>
+            {/* Sidebar content column */}
+            <div className="lg:w-1/3 space-y-6">
+              <Skills />
+              <Education />
             </div>
           </div>
         </div>
