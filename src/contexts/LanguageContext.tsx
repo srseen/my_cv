@@ -10,14 +10,14 @@ interface LanguageContextType {
 
 const translations = {
   th: {
-    name: "สมชาย ใจดี",
-    position: "Junior Frontend Developer",
-    email: "somchai.jaidee@email.com",
-    phone: "+66 89 123 4567",
-    location: "กรุงเทพมหานคร",
+    name: "ซีรีน ยังปากน้ำ",
+    position: "Junior Fullstack Developer",
+    email: "seereen.2540@gmail.com",
+    phone: "097-3532012",
+    location: "สตูล, ประเทศไทย",
     about: "เกี่ยวกับฉัน",
     aboutText:
-      "Junior Frontend Developer ที่สำเร็จการศึกษาปริญญาตรี สาขาวิศวกรรมเคมี จากมหาวิทยาลัยสงขลานครินทร์ แต่ได้ย้ายสายมาเขียนเว็บเพราะความชอบและความหลงใหลในการเขียนโค้ด ศึกษาด้วยตนเองอย่างต่อเนื่อง มีเป้าหมายที่จะพัฒนาตนเองให้เป็น Fullstack Developer ที่สามารถทำงานได้หลากหลาย",
+      "Junior Developer ที่สำเร็จการศึกษาปริญญาตรี สาขาวิศวกรรมเคมี จากมหาวิทยาลัยสงขลานครินทร์ แต่ได้ย้ายสายมาเขียนเว็บเพราะความชอบและความหลงใหลในการเขียนโค้ด ศึกษาด้วยตนเองอย่างต่อเนื่อง มีเป้าหมายที่จะพัฒนาตนเองให้เป็น Fullstack Developer ที่สามารถทำงานได้หลากหลาย",
     skills: "ความสามารถ",
     experience: "ประสบการณ์การทำงาน",
     projects: "โปรเจคที่น่าสนใจ",
@@ -32,14 +32,14 @@ const translations = {
     exportError: "เกิดข้อผิดพลาดในการส่งออก PDF",
   },
   en: {
-    name: "Somchai Jaidee",
-    position: "Junior Frontend Developer",
-    email: "somchai.jaidee@email.com",
-    phone: "+66 89 123 4567",
-    location: "Bangkok, Thailand",
+    name: "Seereen Yangpaknam",
+    position: "Junior Fullstack Developer",
+    email: "seereen.2540@gmail.com",
+    phone: "097-3532012",
+    location: "Satun, Thailand",
     about: "About Me",
     aboutText:
-      "Junior Frontend Developer who graduated with a Bachelor's degree in Chemical Engineering from Prince of Songkla University. Transitioned to web development due to passion and self-taught programming skills. Continuously learning with the goal of becoming a versatile Fullstack Developer capable of handling various projects.",
+      "Junior Developer who graduated with a Bachelor's degree in Chemical Engineering from Prince of Songkla University. Transitioned to web development due to passion and self-taught programming skills. Continuously learning with the goal of becoming a versatile Fullstack Developer capable of handling various projects.",
     skills: "Skills",
     experience: "Work Experience",
     projects: "Featured Projects",

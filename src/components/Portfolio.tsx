@@ -22,7 +22,7 @@ const Portfolio = () => {
     setIsExporting(true);
     try {
       const filename =
-        language === "th" ? "สมชาย-ใจดี-CV.pdf" : "Somchai-Jaidee-CV.pdf";
+        language === "th" ? "Seereen-th-CV.pdf" : "Seereen-en-CV.pdf";
       const result = await exportToPDF("portfolio-content", filename);
       if (result.success) {
         toast.success(t("exportSuccess"));
