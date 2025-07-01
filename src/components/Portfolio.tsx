@@ -64,7 +64,7 @@ const Portfolio = () => {
         {/* A4 sized container */}
         <div
           id="portfolio-content"
-          className="bg-white shadow-xl rounded-lg p-4 md:p-8 animate-fade-in w-full md:w-auto"
+          className="bg-white rounded-lg ring-1 ring-black ring-opacity-5 p-4 md:p-8 animate-fade-in w-full md:w-auto"
           style={{
             width: "210mm",
             minHeight: "297mm",
