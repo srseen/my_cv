@@ -40,15 +40,19 @@ export const translationsCV = {
     ],
     // ประสบการณ์การทำงาน
     experience: "ประสบการณ์การทำงาน",
-    title: "Freelance Frontend Developer",
-    company: "งานอิสระ",
-    period: "2023 - ปัจจุบัน",
-    locationCompany: "Remote",
-    responsibilities: [
-      "พัฒนาเว็บไซต์ด้วย React และ Next.js สำหรับลูกค้าต่างๆ",
-      "ปรับปรุง UI/UX ให้ responsive และใช้งานง่าย",
-      "ทำงานร่วมกับ Backend Developer ในการเชื่อมต่อ API",
-      "แก้ไขบั๊กและปรับปรุงประสิทธิภาพของเว็บไซต์",
+    experiencelist: [
+      {
+        title: "Freelance Frontend Developer",
+        company: "งานอิสระ",
+        period: "2023 - ปัจจุบัน",
+        locationCompany: "Remote",
+        responsibilities: [
+          "พัฒนาเว็บไซต์ด้วย React และ Next.js สำหรับลูกค้าต่างๆ",
+          "ปรับปรุง UI/UX ให้ responsive และใช้งานง่าย",
+          "ทำงานร่วมกับ Backend Developer ในการเชื่อมต่อ API",
+          "แก้ไขบั๊กและปรับปรุงประสิทธิภาพของเว็บไซต์",
+        ],
+      },
     ],
     // โปรเจค
     projects: "โปรเจคที่น่าสนใจ",
@@ -120,15 +124,19 @@ export const translationsCV = {
     ],
     // Work Experience
     experience: "Work Experience",
-    title: "Freelance Frontend Developer",
-    company: "Freelance",
-    period: "2023 - Present",
-    locationCompany: "Remote",
-    responsibilities: [
-      "Develop websites using React and Next.js for various clients",
-      "Improve UI/UX to be responsive and user-friendly",
-      "Collaborate with Backend Developers for API integration",
-      "Fix bugs and improve website performance",
+    experiencelist: [
+      {
+        title: "Freelance Frontend Developer",
+        company: "Freelance",
+        period: "2023 - Present",
+        locationCompany: "Remote",
+        responsibilities: [
+          "Develop websites using React and Next.js for various clients",
+          "Improve UI/UX to be responsive and user-friendly",
+          "Collaborate with Backend Developers for API integration",
+          "Fix bugs and improve website performance",
+        ],
+      },
     ],
     // Projects
     projects: "Featured Projects",

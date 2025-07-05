@@ -81,8 +81,8 @@ const Portfolio = () => {
             </div>
             {/* Sidebar content column */}
             <div className="lg:w-1/3 space-y-6">
-              <Skills />
               <Education />
+              <Skills />
             </div>
           </div>
         </div>
